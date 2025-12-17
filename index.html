@@ -1,0 +1,1114 @@
+<head>
+<link rel="stylesheet" href="index.css">
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navTabs = document.querySelectorAll("#nav-tabs > a");
+
+    navTabs.forEach((tab) => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        navTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+      });
+    });
+  });
+  
+  function changestyle(val1,val2)
+  {
+	const elements = document.getElementsByClassName("active");
+	const listold = elements[0];
+	listold.classList.remove("active");
+	var listnew = document.getElementById(val1);
+	listnew.classList.add("active");
+	
+	const elements1 = document.getElementsByClassName("activediv");
+	const olddiv = elements1[0];
+	olddiv.classList.remove("activediv");
+	olddiv.classList.add("hidediv");
+	var newdiv = document.getElementById(val2);
+	newdiv.classList.remove("hidediv");
+	newdiv.classList.add("activediv");
+	
+  }
+</script>
+</head>
+<body>
+<div class="site-wrap">
+
+  <nav class="site-nav">
+
+    <div class="name">
+      Staff Management
+
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M11.5,22C11.64,22 11.77,22 11.9,21.96C12.55,21.82 13.09,21.38 13.34,20.78C13.44,20.54 13.5,20.27 13.5,20H9.5A2,2 0 0,0 11.5,22M18,10.5C18,7.43 15.86,4.86 13,4.18V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V4.18C7.13,4.86 5,7.43 5,10.5V16L3,18V19H20V18L18,16M19.97,10H21.97C21.82,6.79 20.24,3.97 17.85,2.15L16.42,3.58C18.46,5 19.82,7.35 19.97,10M6.58,3.58L5.15,2.15C2.76,3.97 1.18,6.79 1,10H3C3.18,7.35 4.54,5 6.58,3.58Z"></path>
+      </svg>
+    </div>
+
+    <ul>
+      <li id="pdj" class="active"><a href="#" onclick="changestyle('pdj','div1')">Principal District Court</a></li>
+      <li id="adj"><a href="#" onclick="changestyle('adj','div2')">Additional District Court</a></li>
+      <li id="lc"><a href="#" onclick="changestyle('lc','div3')">Labour Court</a></li>
+      <li id="mcop"><a href="#" onclick="changestyle('mcop','div4')">MCOP Court</a></li>
+      <li id="cjm"><a href="#" onclick="changestyle('cjm','div5')">Chief Judicial Magistrate</a></li>
+      <li id="psj"><a href="#" onclick="changestyle('psj','div6')">Principal Sub Court</a></li>
+	  <li id="asj"><a href="#" onclick="changestyle('asj','div7')">Additional Sub Court</a></li>
+	  <li id="pdm"><a href="#" onclick="changestyle('pdm','div8')">District Munsif Court</a></li>
+	  <li id="jm1"><a href="#" onclick="changestyle('jm1','div9')">Judicial Magistrate - I</a></li>
+	  <li id="jm2"><a href="#" onclick="changestyle('jm2','div10')">Judicial Magistrate - II</a></li>
+	  <li id="dmsrpm"><a href="#" onclick="changestyle('dmsrpm','div11')">DM, Sriperumbudur</a></li>
+	  <li id="jmsrpm"><a href="#" onclick="changestyle('jmsrpm','div12')">JM, Sriperumbudur</a></li>
+	  <li id="uth"><a href="#" onclick="changestyle('uth','div13')">DM & JM, Uthiramerur</a></li>
+	  <li id="mbl"><a href="#" onclick="changestyle('mbl','div14')">Mobile Court</a></li>
+	  <li id="or"><a href="#" onclick="changestyle('or','div15')">Official Receiver</a></li>
+    </ul>
+
+    <div class="note">
+      <h3>Copyright &#169; 2025</h3>
+      <p>Principal District Court,<br/> Kancheepuram.</p>
+    </div>
+
+  </nav>
+
+  <main>
+
+	<div id="div1" class="activediv">
+  
+    <header>
+      
+      <h2 class="title">Principal District Court, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>113</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>82</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>31</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+	
+	<div id="div2" class="hidediv">
+	
+	<header>
+      
+      <h2 class="title">Additional District Court, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>15</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>8</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>7</span>
+        </a>
+      </nav>
+    </header>
+	
+	<div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+	
+	<div id="div3" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Labour Court, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>22</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>13</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>9</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+
+	<div id="div4" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Special Dist. Court to deal with MCOP Cases, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>17</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>11</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>6</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div5" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Chief Judicial Magistrate Court, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>19</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>16</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>3</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div6" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Principal Sub Court, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>15</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>10</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>5</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div7" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Additional Sub Court, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>11</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>10</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>1</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div8" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">District Munsif Court, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>21</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>14</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>7</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+   
+	<div id="div9" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Judicial Magistrate - I, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>12</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>9</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>3</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div10" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Judicial Magistrate - II, Kancheepuram District</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>14</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>12</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>2</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div11" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">District Munsif Court, Sriperumbudur</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>24</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>18</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>6</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div12" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Judicial Magistrate Court, Sriperumbudur</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>17</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>12</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>5</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div13" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">District Munsif cum Judicial Magistrate Court, Uthiramerur</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>25</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>21</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>4</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div14" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Mobile Court, Kancheepuram</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>3</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>1</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>2</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+  
+	<div id="div15" class="hidediv">
+  
+    <header>
+      
+      <h2 class="title">Official Receiver Court, Kancheepuram</h2>
+
+      <nav class="nav-tabs" id="nav-tabs">
+        <a href="#" class="active">
+          Sanctioned
+          <span>2</span>
+        </a>
+        <a href="#">
+          Filled Up
+          <span>1</span>
+        </a>
+        <a href="#">
+          Vacant
+		  <span>1</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="content-columns">
+
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	</div>
+	
+  </main>
+
+</div>
+</body>
