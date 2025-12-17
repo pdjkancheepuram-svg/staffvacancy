@@ -31,6 +31,19 @@
 	newdiv.classList.add("activediv");
 	
   }
+  
+  function showdet(val1,val2,val3)
+  {
+	var d1 = document.getElementById(val1);
+	d1.classList.add("activediv2");	
+	d1.classList.remove("hidediv2");	
+	var d2 = document.getElementById(val2);
+	d2.classList.remove("activediv2");	
+	d2.classList.add("hidediv2");	
+	var d3 = document.getElementById(val3);
+	d3.classList.remove("activediv2");	
+	d3.classList.add("hidediv2");	
+  }
 </script>
 </head>
 <body>
@@ -80,25 +93,60 @@
       <h2 class="title">Principal District Court, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" class="active">
+        <a href="#" onclick="showdet('sanc1','fill1','vacan1')" class="active">
           Sanctioned
           <span>113</span>
         </a>
-        <a href="#">
+        <a href="#" onclick="showdet('fill1','sanc1','vacan1')">
           Filled Up
           <span>82</span>
         </a>
-        <a href="#">
+        <a href="#" onclick="showdet('vacan1','sanc1','fill1')">
           Vacant
 		  <span>31</span>
         </a>
       </nav>
     </header>
 
-    <div class="content-columns">
+    <div id="sanc1" class="content-columns activediv2">
 
       <div class="col">
+        <div class="item">1</div>
         <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+    </div>
+	
+	<div id="fill1" class="content-columns hidediv2">
+
+      <div class="col">
+        <div class="item">2</div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
@@ -127,15 +175,30 @@
         <div class="item"></div>
         <div class="item"></div>
       </div>
+
+    </div>
+	
+	<div id="vacan1" class="content-columns hidediv2">
+
       <div class="col">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item"><center><h3>Central Nazir - 1</h3></center></div>
+        <div class="item"><center><h3>Head Clerk - 2</h3></center></div>
+        <div class="item"><center><h3>Protocol Officer - 1</h3></center></div>
+        <div class="item"><center><h3>Translator - 1</h3></center></div>
+        <div class="item"><center><h3>Deputy Nazir - 1</h3></center></div>
+        <div class="item"><center><h3>Executive Assistant - 1</h3></center></div>
+        <div class="item"><center><h3>Assistant - 2</h3></center></div>
+        <div class="item"><center><h3>Computer Operator - 2</h3></center></div>
+      </div>
+      <div class="col">
+        <div class="item"><center><h3>Junior Assistant - 4</h3></center></div>
+        <div class="item"><center><h3>Senior Bailiff - 2</h3></center></div>
+        <div class="item"><center><h3>Process Server - 1</h3></center></div>
+        <div class="item"><center><h3>Copyist Attender - 1</h3></center></div>
+        <div class="item"><center><h3>Office Assistant - 9</h3></center></div>
+        <div class="item"><center><h3>Full Time Masalchi - 1</h3></center></div>
+        <div class="item"><center><h3>Sweeper - 1</h3></center></div>
+        <div class="item"><center><h3>Scavenger - 1</h3></center></div>
       </div>
 
     </div>
