@@ -86,6 +86,85 @@ const pendata1 = google.visualization.arrayToDataTable([
   
 ]);
 
+// Set Data
+const pendata2 = google.visualization.arrayToDataTable([
+  ['Type', 'value'],
+  ['OS',794],
+  ['MCOP',27],
+  ['EP',5],
+  ['AS',3],
+  ['CC',3],
+  ['CRLA',7],
+  ['SC',358],
+  ['CRLMP',9]
+  
+]);
+
+// Set Data
+const pendata3 = google.visualization.arrayToDataTable([
+  ['Type', 'value'],
+  ['EP',15],
+  ['CP',203],
+  ['ID',866],
+  ['AP',1],
+  ['C',1]
+  
+]);
+
+// Set Data
+const pendata4 = google.visualization.arrayToDataTable([
+  ['Type', 'value'],
+  ['EP',52],
+  ['MCOP',1432]
+  
+]);
+
+// Set Data
+const pendata5 = google.visualization.arrayToDataTable([
+  ['Type', 'value'],
+  ['CC',26],
+  ['MC',26],
+  ['SC',8],
+  ['CRLMP',357],
+  ['MCOP',292]
+  
+]);
+
+// Set Data
+const pendata6 = google.visualization.arrayToDataTable([
+  ['Type', 'value'],
+  ['SC',207],
+  ['CRLMP',2],
+  ['AS',158],
+  ['CMA',15],
+  ['EP',189],
+  ['HMOP',19],
+  ['LAOP',86],
+  ['IA',4],
+  ['OP',780],
+  ['OS',996],
+  ['SOP',3],
+  ['RCA',9]
+  
+]);
+
+// Set Data
+const pendata7 = google.visualization.arrayToDataTable([
+  ['Type', 'value'],
+  ['AS',207],
+  ['CMA',23],
+  ['EP',53],
+  ['IA',6],
+  ['MCOP',510],
+  ['OP',1],
+  ['OS',922],
+  ['RCA',12],
+  ['CC',1],
+  ['SC',200]
+  
+]);
+
+
 // Set Options
 const options = {
   title:'',
@@ -108,6 +187,30 @@ chart1.draw(data1, options);
 // Draw
 const penchart1 = new google.visualization.PieChart(document.getElementById('penChart1'));
 penchart1.draw(pendata1, penoptions);
+
+// Draw
+const penchart2 = new google.visualization.PieChart(document.getElementById('penChart2'));
+penchart2.draw(pendata2, penoptions);
+
+// Draw
+const penchart3 = new google.visualization.PieChart(document.getElementById('penChart3'));
+penchart3.draw(pendata3, penoptions);
+
+// Draw
+const penchart4 = new google.visualization.PieChart(document.getElementById('penChart4'));
+penchart4.draw(pendata4, penoptions);
+
+// Draw
+const penchart5 = new google.visualization.PieChart(document.getElementById('penChart5'));
+penchart5.draw(pendata5, penoptions);
+
+// Draw
+const penchart6 = new google.visualization.PieChart(document.getElementById('penChart6'));
+penchart6.draw(pendata6, penoptions);
+
+// Draw
+const penchart7 = new google.visualization.PieChart(document.getElementById('penChart7'));
+penchart7.draw(pendata7, penoptions);
 
 }
 
@@ -160,7 +263,7 @@ penchart1.draw(pendata1, penoptions);
       <h2 class="title">Principal District Court, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" onclick="showdet('sanc1','fill1','vacan1')" class="active">
+        <a href="#" onclick="showdet('sanc1','fill1','vacan1','pend1')" class="active">
           Sanctioned
           <span>113</span>
         </a>
@@ -323,17 +426,21 @@ penchart1.draw(pendata1, penoptions);
       <h2 class="title">Additional District Court, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" onclick="showdet('sanc2','fill2','vacan2')" class="active">
+        <a href="#" onclick="showdet('sanc2','fill2','vacan2','pend2')" class="active">
           Sanctioned
           <span>15</span>
         </a>
-        <a href="#" onclick="showdet('fill2','sanc2','vacan2')">
+        <a href="#" onclick="showdet('fill2','sanc2','vacan2','pend2')">
           Filled Up
           <span>8</span>
         </a>
-        <a href="#" onclick="showdet('vacan2','sanc2','fill2')">
+        <a href="#" onclick="showdet('vacan2','sanc2','fill2','pend2')">
           Vacant
 		  <span>7</span>
+        </a>
+		<a href="#" onclick="showdet('pend2','sanc2','fill2','vacan2')">
+          Pendency
+		  <span>1206</span>
         </a>
       </nav>
     </header>
@@ -423,6 +530,25 @@ penchart1.draw(pendata1, penoptions);
 
 	</div>
 	
+	<div id="pend2" class="content-columns hidediv2">
+	
+	 <div class="col">
+        <div class="item"><center><h4>AS - 3</h4></center></div>
+        <div class="item"><center><h4>EP - 5</h4></center></div>
+        <div class="item"><center><h4>MCOP - 27</h4></center></div>
+        <div class="item"><center><h4>OS - 794</h4></center></div>
+     </div>
+	 <div class="col">
+        <div class="item"><center><h4>CC - 3</h4></center></div>
+        <div class="item"><center><h4>CRLA - 7</h4></center></div>
+        <div class="item"><center><h4>SC - 358</h4></center></div>
+        <div class="item"><center><h4>CRLMP - 9</h4></center></div>
+     </div>
+	 
+	 <div id="penChart2" style="width:100%; max-width:600px; height:500px;"></div>
+
+	</div>
+	
 	</div>
 	
 	<div id="div3" class="hidediv">
@@ -432,17 +558,21 @@ penchart1.draw(pendata1, penoptions);
       <h2 class="title">Labour Court, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" onclick="showdet('sanc3','fill3','vacan3')" class="active">
+        <a href="#" onclick="showdet('sanc3','fill3','vacan3','pend3')" class="active">
           Sanctioned
           <span>22</span>
         </a>
-        <a href="#" onclick="showdet('fill3','sanc3','vacan3')">
+        <a href="#" onclick="showdet('fill3','sanc3','vacan3','pend3')">
           Filled Up
           <span>13</span>
         </a>
-        <a href="#" onclick="showdet('vacan3','sanc3','fill3')">
+        <a href="#" onclick="showdet('vacan3','sanc3','fill3','pend3')">
           Vacant
 		  <span>9</span>
+        </a>
+		<a href="#" onclick="showdet('pend3','sanc3','fill3','vacan3')">
+          Pendency
+		  <span>1086</span>
         </a>
       </nav>
     </header>
@@ -512,6 +642,20 @@ penchart1.draw(pendata1, penoptions);
 
 	</div>
 	
+	<div id="pend3" class="content-columns hidediv2">
+	
+	 <div class="col">
+        <div class="item"><center><h4>EP - 15</h4></center></div>
+        <div class="item"><center><h4>CP - 203</h4></center></div>
+        <div class="item"><center><h4>ID - 866</h4></center></div>
+        <div class="item"><center><h4>AP - 1</h4></center></div>
+		<div class="item"><center><h4>C - 1</h4></center></div>
+     </div>
+	 
+	 <div id="penChart3" style="width:100%; max-width:600px; height:500px;"></div>
+
+	</div>
+	
 	</div>
 
 	<div id="div4" class="hidediv">
@@ -521,17 +665,21 @@ penchart1.draw(pendata1, penoptions);
       <h2 class="title">Special Dist. Court to deal with MCOP Cases, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" onclick="showdet('sanc4','fill4','vacan4')" class="active">
+        <a href="#" onclick="showdet('sanc4','fill4','vacan4','pend4')" class="active">
           Sanctioned
           <span>17</span>
         </a>
-        <a href="#" onclick="showdet('fill4','sanc4','vacan4')">
+        <a href="#" onclick="showdet('fill4','sanc4','vacan4','pend4')">
           Filled Up
           <span>11</span>
         </a>
-        <a href="#" onclick="showdet('vacan4','sanc4','fill4')">
+        <a href="#" onclick="showdet('vacan4','sanc4','fill4','pend4')">
           Vacant
 		  <span>6</span>
+        </a>
+		<a href="#" onclick="showdet('pend4','vacan4','sanc4','fill4')">
+          Pendency
+		  <span>1485</span>
         </a>
       </nav>
     </header>
@@ -601,6 +749,17 @@ penchart1.draw(pendata1, penoptions);
 
 	</div>
 	
+	<div id="pend4" class="content-columns hidediv2">
+	
+	 <div class="col">
+        <div class="item"><center><h4>EP - 52</h4></center></div>
+        <div class="item"><center><h4>MCOP - 1432</h4></center></div>
+     </div>
+	 
+	 <div id="penChart4" style="width:100%; max-width:600px; height:500px;"></div>
+
+	</div>
+	
 	</div>
   
 	<div id="div5" class="hidediv">
@@ -610,17 +769,21 @@ penchart1.draw(pendata1, penoptions);
       <h2 class="title">Chief Judicial Magistrate Court, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" onclick="showdet('sanc5','fill5','vacan5')" class="active">
+        <a href="#" onclick="showdet('sanc5','fill5','vacan5','pend5')" class="active">
           Sanctioned
           <span>19</span>
         </a>
-        <a href="#" onclick="showdet('fill5','sanc5','vacan5')">
+        <a href="#" onclick="showdet('fill5','sanc5','vacan5','pend5')">
           Filled Up
           <span>16</span>
         </a>
-        <a href="#" onclick="showdet('vacan5','sanc5','fill5')">
+        <a href="#" onclick="showdet('vacan5','sanc5','fill5','pend5')">
           Vacant
 		  <span>3</span>
+        </a>
+		<a href="#" onclick="showdet('pend5','vacan5','sanc5','fill5')">
+          Pendency
+		  <span>709</span>
         </a>
       </nav>
     </header>
@@ -690,6 +853,22 @@ penchart1.draw(pendata1, penoptions);
 
 	</div>
 	
+	<div id="pend5" class="content-columns hidediv2">
+	
+	 <div class="col">
+        <div class="item"><center><h4>MCOP - 292</h4></center></div>
+     </div>
+	 <div class="col">
+        <div class="item"><center><h4>CC - 26</h4></center></div>
+        <div class="item"><center><h4>MC - 26</h4></center></div>
+		<div class="item"><center><h4>SC - 8</h4></center></div>
+        <div class="item"><center><h4>CRLMP - 357</h4></center></div>
+     </div>
+	 
+	 <div id="penChart5" style="width:100%; max-width:600px; height:500px;"></div>
+
+	</div>
+	
 	</div>
   
 	<div id="div6" class="hidediv">
@@ -699,17 +878,21 @@ penchart1.draw(pendata1, penoptions);
       <h2 class="title">Principal Sub Court, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" onclick="showdet('sanc6','fill6','vacan6')" class="active">
+        <a href="#" onclick="showdet('sanc6','fill6','vacan6','pend6')" class="active">
           Sanctioned
           <span>15</span>
         </a>
-        <a href="#" onclick="showdet('fill6','sanc6','vacan6')">
+        <a href="#" onclick="showdet('fill6','sanc6','vacan6','pend6')">
           Filled Up
           <span>10</span>
         </a>
-        <a href="#" onclick="showdet('vacan6','sanc6','fill6')">
+        <a href="#" onclick="showdet('vacan6','sanc6','fill6','pend6')">
           Vacant
 		  <span>5</span>
+        </a>
+		<a href="#" onclick="showdet('pend6','vacan6','sanc6','fill6')">
+          Pendency
+		  <span>2467</span>
         </a>
       </nav>
     </header>
@@ -779,6 +962,29 @@ penchart1.draw(pendata1, penoptions);
 
 	</div>
 	
+	<div id="pend6" class="content-columns hidediv2">
+	
+	 <div class="col">
+        <div class="item"><center><h4>AS - 158</h4></center></div>
+        <div class="item"><center><h4>CMA - 15</h4></center></div>
+        <div class="item"><center><h4>EP - 189</h4></center></div>
+        <div class="item"><center><h4>HMOP - 19</h4></center></div>
+        <div class="item"><center><h4>LAOP - 86</h4></center></div>
+        <div class="item"><center><h4>IA - 4</h4></center></div>
+        <div class="item"><center><h4>OP - 780</h4></center></div>
+        <div class="item"><center><h4>OS - 996</h4></center></div>
+		<div class="item"><center><h4>SOP - 3</h4></center></div>
+        <div class="item"><center><h4>RCA - 9</h4></center></div>
+      </div>
+	  <div class="col">
+        <div class="item"><center><h4>SC - 207</h4></center></div>
+        <div class="item"><center><h4>CRLMP - 2</h4></center></div>
+      </div>
+	  
+	  <div id="penChart6" style="width:100%; max-width:600px; height:500px;"></div>
+
+	</div>
+	
 	</div>
   
 	<div id="div7" class="hidediv">
@@ -788,17 +994,21 @@ penchart1.draw(pendata1, penoptions);
       <h2 class="title">Additional Sub Court, Kancheepuram District</h2>
 
       <nav class="nav-tabs" id="nav-tabs">
-        <a href="#" onclick="showdet('sanc7','fill7','vacan7')" class="active">
+        <a href="#" onclick="showdet('sanc7','fill7','vacan7','pend7')" class="active">
           Sanctioned
           <span>11</span>
         </a>
-        <a href="#" onclick="showdet('fill7','sanc7','vacan7')">
+        <a href="#" onclick="showdet('fill7','sanc7','vacan7','pend7')">
           Filled Up
           <span>10</span>
         </a>
-        <a href="#" onclick="showdet('vacan7','sanc7','fill7')">
+        <a href="#" onclick="showdet('vacan7','sanc7','fill7','pend7')">
           Vacant
 		  <span>1</span>
+        </a>
+		<a href="#" onclick="showdet('pend7','vacan7','sanc7','fill7')">
+          Pendency
+		  <span>1935</span>
         </a>
       </nav>
     </header>
@@ -865,6 +1075,27 @@ penchart1.draw(pendata1, penoptions);
         <div class="item"><center><h4>Assistant - 2</h4></center></div>
         <div class="item"><center><h4>Computer Operator - 2</h4></center></div>
       </div>
+
+	</div>
+	
+	<div id="pend7" class="content-columns hidediv2">
+	
+	 <div class="col">
+        <div class="item"><center><h4>AS - 207</h4></center></div>
+        <div class="item"><center><h4>CMA - 23</h4></center></div>
+        <div class="item"><center><h4>EP - 53</h4></center></div>
+        <div class="item"><center><h4>MCOP - 510</h4></center></div>
+        <div class="item"><center><h4>IA - 6</h4></center></div>
+        <div class="item"><center><h4>OP - 1</h4></center></div>
+        <div class="item"><center><h4>OS - 922</h4></center></div>
+        <div class="item"><center><h4>RCA - 12</h4></center></div>
+      </div>
+	  <div class="col">
+        <div class="item"><center><h4>CC - 1</h4></center></div>
+        <div class="item"><center><h4>SC - 200</h4></center></div>
+      </div>
+	  
+	  <div id="penChart7" style="width:100%; max-width:600px; height:500px;"></div>
 
 	</div>
 	
