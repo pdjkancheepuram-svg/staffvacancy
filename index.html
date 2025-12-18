@@ -33,7 +33,7 @@
 	
   }
   
-  function showdet(val1,val2,val3)
+  function showdet(val1,val2,val3,val4)
   {
 	var d1 = document.getElementById(val1);
 	d1.classList.add("activediv2");	
@@ -43,7 +43,10 @@
 	d2.classList.add("hidediv2");	
 	var d3 = document.getElementById(val3);
 	d3.classList.remove("activediv2");	
-	d3.classList.add("hidediv2");	
+	d3.classList.add("hidediv2");
+	var d4 = document.getElementById(val4);
+	d4.classList.remove("activediv2");	
+	d4.classList.add("hidediv2");	
   }
   
   google.charts.load('current', {'packages':['corechart']});
@@ -59,6 +62,30 @@ const data1 = google.visualization.arrayToDataTable([
   ['Vacant',31]
 ]);
 
+// Set Data
+const pendata1 = google.visualization.arrayToDataTable([
+  ['Type', 'value'],
+  ['OS',759],
+  ['OP',205],
+  ['EP',301],
+  ['AS',78],
+  ['C',9],
+  ['CMA',58],
+  ['COS',28],
+  ['IP',26],
+  ['LAOP',301],
+  ['RLTA',7],
+  ['CC',7],
+  ['CRLA',107],
+  ['SC',326],
+  ['SPLCC',43],
+  ['CRLMP',68],
+  ['CRLR',26],
+  ['SPL.SC',219],
+  ['RCS',11]
+  
+]);
+
 // Set Options
 const options = {
   title:'',
@@ -66,9 +93,21 @@ const options = {
   is3D:true
 };
 
+// Set Options
+const penoptions = {
+  title:'',
+  width: 600,
+  height: 600,
+  is3D:true
+};
+
 // Draw
 const chart1 = new google.visualization.PieChart(document.getElementById('myChart1'));
 chart1.draw(data1, options);
+
+// Draw
+const penchart1 = new google.visualization.PieChart(document.getElementById('penChart1'));
+penchart1.draw(pendata1, penoptions);
 
 }
 
@@ -125,13 +164,17 @@ chart1.draw(data1, options);
           Sanctioned
           <span>113</span>
         </a>
-        <a href="#" onclick="showdet('fill1','sanc1','vacan1')">
+        <a href="#" onclick="showdet('fill1','sanc1','vacan1','pend1')">
           Filled Up
           <span>82</span>
         </a>
-        <a href="#" onclick="showdet('vacan1','sanc1','fill1')">
+        <a href="#" onclick="showdet('vacan1','sanc1','fill1','pend1')">
           Vacant
 		  <span>31</span>
+        </a>
+		<a href="#" onclick="showdet('pend1','sanc1','fill1','vacan1')">
+          Pendency
+		  <span>2592</span>
         </a>
       </nav>
     </header>
@@ -238,6 +281,36 @@ chart1.draw(data1, options);
       </div>
 	  
 	  <div id="myChart1" style="width:100%; max-width:600px; height:500px;"></div>
+
+    </div>
+	
+	<div id="pend1" class="content-columns hidediv2">
+
+      <div class="col">
+        <div class="item"><center><h4>AS - 78</h4></center></div>
+        <div class="item"><center><h4>CMA - 58</h4></center></div>
+        <div class="item"><center><h4>EP - 301</h4></center></div>
+        <div class="item"><center><h4>LAOP - 301</h4></center></div>
+        <div class="item"><center><h4>OP - 208</h4></center></div>
+        <div class="item"><center><h4>OS - 759</h4></center></div>
+        <div class="item"><center><h4>IP - 26</h4></center></div>
+        <div class="item"><center><h4>C - 9</h4></center></div>
+		<div class="item"><center><h4>RLTA - 7</h4></center></div>
+		<div class="item"><center><h4>COS - 28</h4></center></div>
+		
+      </div>
+      <div class="col">
+		<div class="item"><center><h4>CC - 7</h4></center></div>
+		<div class="item"><center><h4>CRLA - 107</h4></center></div>
+		<div class="item"><center><h4>SC - 326</h4></center></div>
+		<div class="item"><center><h4>SPLCC - 43</h4></center></div>
+        <div class="item"><center><h4>CRLMP - 68</h4></center></div>
+        <div class="item"><center><h4>CRLR - 26</h4></center></div>
+        <div class="item"><center><h4>SPL.SC - 219</h4></center></div>
+        <div class="item"><center><h4>RCS - 11</h4></center></div>
+      </div>
+	  
+	  <div id="penChart1" style="width:100%; max-width:600px; height:500px;"></div>
 
     </div>
 	
